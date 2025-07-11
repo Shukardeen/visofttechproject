@@ -1,5 +1,5 @@
 .env
-
+node_modules/
 routes/testimonial.routes.js
 
 models/testimonial.model.js
