@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-button: #c4a964;
+    --color-button-hover: #c2af81;
+    --color-card-border: #c4a964;
+    --color-card-bg: #fffbf2;
+    --color-text: #c09732;
+    --color-text-bg: #fffbf2;
+}
