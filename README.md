@@ -3,7 +3,6 @@
 [![React](https://img.shields.io/badge/React-19.1.0-blue.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-green.svg)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-8.16.0-green.svg)](https://www.mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-4.1.10-blue.svg)](https://tailwindcss.com/)
 
 A modern, full-stack web application for VisoftTech, a professional IT services company. This platform showcases the company's expertise in software development, mobile apps, cybersecurity, cloud infrastructure, and data analytics.
 
@@ -31,7 +30,6 @@ A modern, full-stack web application for VisoftTech, a professional IT services 
 - **React 19.1.0** - Modern UI library with hooks
 - **Vite** - Fast build tool and development server
 - **Tailwind CSS 4.1.10** - Utility-first CSS framework
-- **Material-UI (MUI)** - React component library
 - **Redux Toolkit** - State management
 - **React Router DOM** - Client-side routing
 - **Axios** - HTTP client for API calls
@@ -171,47 +169,15 @@ visofttechproject/
 - Responsive design with Tailwind CSS
 - Smooth animations with AOS library
 - Professional color scheme and typography
-- Interactive components with Material-UI
 
 ### Security Features
 - JWT-based authentication
 - Password encryption with bcrypt
 - CORS protection
-- Input validation and sanitization
 
 ### Performance
 - Optimized images with Cloudinary
-- Lazy loading for better performance
 - Efficient state management with Redux
 - Fast development with Vite
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-**VisoftTech**
-- Website: [visofttech.com](https://visofttech.com)
-- Email: contact@visofttech.com
-- LinkedIn: [VisoftTech](https://linkedin.com/company/visofttech)
-
-## 🙏 Acknowledgments
-
-- React team for the amazing framework
-- Vite for the fast build tool
-- Tailwind CSS for the utility-first approach
-- MongoDB for the flexible database solution
-- All contributors and supporters
-
 ---
-
-**Built with ❤️ by the VisoftTech Team** 
