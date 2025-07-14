@@ -179,5 +179,5 @@ visofttechproject/
 - Optimized images with Cloudinary
 - Efficient state management with Redux
 - Fast development with Vite
-- 
+
 ---
