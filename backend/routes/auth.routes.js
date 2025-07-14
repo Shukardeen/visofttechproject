@@ -3,7 +3,10 @@ const router = express.Router();
 const {uploadUser}= require('../config/multer');
 const {checkForAuthentication} = require('../middlewares/auth');
 
-const {handleRegister, handleLogin, handleLogout, handleSendOtpforForgotPass ,handleResetPassword,handleUpdateProfile ,handleSendOtpToEmail,handleChangePassword} = require('../controllers/auth.controller');
+const {checkAuth, handleRegister, handleLogin, handleLogout, handleSendOtpforForgotPass ,handleResetPassword,handleUpdateProfile ,handleSendOtpToEmail,handleChangePassword} = require('../controllers/auth.controller');
+
+//check auth route
+router.get("/checkAuth", checkForAuthentication, checkAuth);
 
 // Register a new user
 router.post('/register', handleRegister);

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { signupUser, loginUser, logoutUser } from "../Thunks/thunks";
+import { signupUser, loginUser, logoutUser, checkAuth } from "../Thunks/thunks";
 
 const initialState = {
   isAuthenticated: false,
@@ -28,6 +28,13 @@ const authSlice = createSlice({
       })
       .addCase(logoutUser.rejected, (state, action) => {
         console.log("ERROR LOGGING OUT :: ", action.payload);
+      })
+      .addCase(checkAuth.fulfilled, (state, action) => {
+        state.user = action.payload.user || null;
+        state.isAuthenticated = action.payload.isAuthenticated;
+      })
+      .addCase(checkAuth.rejected, (state, action) => {
+        console.log("ERROR CHECKING AUTHENTICATION :: ", action.payload);
       })
   },
 });

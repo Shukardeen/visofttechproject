@@ -266,6 +266,20 @@ const handleChangePassword = async (req, res) => {
   }
 };
 
+//check auth controller
+const checkAuth = (req, res) => {
+  try {
+    const user = req.user;
+    if(!user) {
+      return res.json({ isAuthenticated: false });
+    }
+    res.json({ isAuthenticated: true, user });
+  } catch (err) {
+    console.log("ERROR CHECKING AUTHENTICATION", err);
+    res.json({ error: "Internal Server Error" });
+  }
+}
+
 module.exports = {
   handleRegister,
   handleLogin,
@@ -275,4 +289,5 @@ module.exports = {
   handleUpdateProfile,
   handleSendOtpToEmail,
   handleChangePassword,
+  checkAuth
 };
