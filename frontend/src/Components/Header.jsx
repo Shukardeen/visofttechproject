@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthModals } from "./Components.js"
-import { logoutUser } from "../Redux/Thunks/thunks.js"
+import { logoutUser, checkAuth } from "../Redux/Thunks/thunks.js"
 import { useSelector, useDispatch } from 'react-redux'
 import toast from "react-hot-toast"
 import { FaUserAlt, FaBars, FaTimes } from "react-icons/fa";
@@ -96,6 +96,7 @@ function Header() {
   }
 
   useEffect(() => {
+    dispatch(checkAuth());
     dispatch(getAllProjects());
   }, []);
 
