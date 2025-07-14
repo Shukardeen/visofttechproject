@@ -30,7 +30,7 @@ const authSlice = createSlice({
         console.log("ERROR LOGGING OUT :: ", action.payload);
       })
       .addCase(checkAuth.fulfilled, (state, action) => {
-        state.user = action.payload.user || null;
+        state.user = action.payload.user;
         state.isAuthenticated = action.payload.isAuthenticated;
       })
       .addCase(checkAuth.rejected, (state, action) => {
