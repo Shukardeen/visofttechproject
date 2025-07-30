@@ -41,7 +41,7 @@ const handleRegister = async (req, res) => {
     });
     await Otp.deleteOne({ email });
     await newUser.save();
-    const subject = "Welcome to AISOFTTECH";
+    const subject = "Welcome to TechTalks";
     const message = welcomeMessage(newUser.name);
     console.log("message created");
     await sendEmail(newUser.email, subject, message);

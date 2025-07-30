@@ -44,9 +44,9 @@ const welcomeMessage = (name) => `
   <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
     <div>
       <h2>Hi ${name},</h2>
-      <p>Welcome to <strong>Your Company</strong>! 🎉 We're thrilled to have you onboard.</p>
+      <p>Welcome to <strong>TechTalks</strong>! 🎉 We're thrilled to have you onboard.</p>
       <p>Start exploring our services or reach out to us if you need help getting started.</p>
-      <a href="https://yourwebsite.com/services" style="display:inline-block; padding:10px 20px; background:#007bff; color:#fff; text-decoration:none; border-radius:4px;">View Services</a>
+      <a href="https://tecktalks.vercel.app/services" style="display:inline-block; padding:10px 20px; background:#007bff; color:#fff; text-decoration:none; border-radius:4px;">View Services</a>
       <p style="margin-top: 20px;">Cheers,<br>The Your Company Team</p>
     </div>
   </body>
