@@ -37,8 +37,8 @@ function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <img src={ logo } alt="logo" className='w-36' />
-              <p className="text-gray-300 leading-relaxed">
+              <Link to="/" className='text-3xl font-bold'>Logo</Link>
+              <p className="text-gray-300 leading-relaxed mt-3">
                 Delivering innovative IT solutions that transform businesses and drive digital success. 
                 We are committed to excellence and cutting-edge technology.
               </p>

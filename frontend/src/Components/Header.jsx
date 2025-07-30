@@ -104,8 +104,8 @@ function Header() {
     <header className='border border-b-card-border w-full h-18 bg-transparent backdrop-blur-md flex justify-between items-center fixed top-0 z-50 border-gray-200'>
       {/* Logo */}
       <div className="flex items-center justify-start pl-6">
-        <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-yellow-600 to-purple-600 bg-clip-text text-transparent">
-          <img src={logo} alt="Logo" className='w-36' />
+        <Link to="/" className="text-3xl font-bold">
+          Logo
         </Link>
       </div>
 
