@@ -8,7 +8,6 @@ export const checkAuth = createAsyncThunk("auth/checkAuth", async (_, thunkAPI) 
     const response = await axios.get(`${config.backendUrl}/auth/checkAuth`, {
       withCredentials: true
     });
-    console.log(response.data);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data);
