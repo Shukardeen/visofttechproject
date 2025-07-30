@@ -10,7 +10,7 @@ export const checkAuth = createAsyncThunk("auth/checkAuth", async (_, thunkAPI) 
     });
     return response.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -34,7 +34,7 @@ export const signupUser = createAsyncThunk(
         data: response.data.newUser,
       };
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response);
     }
   }
 );
@@ -59,7 +59,7 @@ export const loginUser = createAsyncThunk(
         data: response.data.user,
       };
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response);
     }
   }
 );
@@ -78,7 +78,7 @@ export const logoutUser = createAsyncThunk(
       );
       return true;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response);
     }
   }
 );
@@ -102,7 +102,7 @@ export const changeAdminPass = createAsyncThunk("user/changeAdminPass", async (u
       user: response.data.user
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -120,7 +120,7 @@ export const resetPassword = createAsyncThunk("user/resetPass", async (resetData
       user: response.data.user
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 })
 
@@ -138,7 +138,7 @@ export const updateProfile = createAsyncThunk("user/update", async (userData, th
       user: response.data.user
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -155,7 +155,7 @@ export const getAllUsers = createAsyncThunk(
       );
       return response.data.users;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response);
     }
   }
 );
@@ -171,7 +171,7 @@ export const deleteUser = createAsyncThunk("user/delete", async (userId, thunkAP
       userId
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -191,7 +191,7 @@ export const editUserRole = createAsyncThunk("user/editRole", async (userDetails
       isAdmin
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 })
 
@@ -203,7 +203,7 @@ export const getAllProjects = createAsyncThunk("project/getAllProjects", async (
     });
     return response.data.projects;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -222,7 +222,7 @@ export const addNewProject = createAsyncThunk("project/addNew", async (projectDa
     }
   } catch (error) {
     console.log("ERROR CREATING PROJECT :: ", error);
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -239,7 +239,7 @@ export const destroyProject = createAsyncThunk("project/destroy", async (project
     }
   } catch (error) {
     console.log("ERROR DESTROYING PROJECT :: ", error);
-    return thunkAPI.rejectWithValue(error.response.data)
+    return thunkAPI.rejectWithValue(error.response)
   }
 });
 
@@ -259,7 +259,7 @@ export const updateProject = createAsyncThunk("project/update", async ({ project
     }
   } catch (error) {
     console.log("ERROR UPDATING PROJECT :: ", error);
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -271,7 +271,7 @@ export const getAllContacts = createAsyncThunk("contact/getAll", async (_, thunk
     });
     return response.data.contacts
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -286,7 +286,7 @@ export const createContact = createAsyncThunk("contact/createNew", async (contac
     });
     return response.data.newContact;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data)
+    return thunkAPI.rejectWithValue(error.response)
   }
 });
 
@@ -300,7 +300,7 @@ export const markAllRead = createAsyncThunk("contact/markAllRead", async (_, thu
       success: true
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -315,7 +315,7 @@ export const markAsRead = createAsyncThunk("contact/markAsRead", async (contactI
       contactId
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
 
@@ -330,6 +330,6 @@ export const destroyContact = createAsyncThunk("contact/destroyContact", async (
       contactId
     }
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data);
+    return thunkAPI.rejectWithValue(error.response);
   }
 });
