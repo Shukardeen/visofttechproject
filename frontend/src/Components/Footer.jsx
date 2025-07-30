@@ -37,7 +37,7 @@ function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <Link to="/" className='text-3xl font-bold'>Logo</Link>
+              <Link to="/" className='text-2xl font-bold'>TeckTalks</Link>
               <p className="text-gray-300 leading-relaxed mt-3">
                 Delivering innovative IT solutions that transform businesses and drive digital success. 
                 We are committed to excellence and cutting-edge technology.
