@@ -72,7 +72,7 @@ function Contact() {
                                 <input
                                     type="email"
                                     id="email"
-                                    className={`w-full pl-10 pr-4 py-3 ${isAuthenticated ? "bg-gray-100 text-gray-600" : ""} border border-card-border rounded-lg focus:ring-2 focus:ring-card-border focus:outline-none focus:border-transparent transition-all duration-200`}
+                                    className={`w-full pl-10 pr-4 py-3 border border-card-border rounded-lg focus:ring-2 focus:ring-card-border focus:outline-none focus:border-transparent transition-all duration-200`}
                                     placeholder="Enter your email address"
                                     {...register("email", {
                                         required: {value: true, message: "Email is required"}
