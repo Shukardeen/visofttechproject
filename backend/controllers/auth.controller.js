@@ -12,7 +12,6 @@ const {
 const handleRegister = async (req, res) => {
   try {
     const { name, phone, email, password, otp } = req.body;
-    console.log(req.body);
 
     const user =
       (await User.findOne({ email })) || (await User.findOne({ phone }));
@@ -43,9 +42,7 @@ const handleRegister = async (req, res) => {
     await newUser.save();
     const subject = "Welcome to TechTalks";
     const message = welcomeMessage(newUser.name);
-    console.log("message created");
     await sendEmail(newUser.email, subject, message);
-    console.log("email sent");
     res.status(201).json({ message: "User registered successfully", newUser });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
@@ -96,10 +93,6 @@ const handleLogout = async (req, res) => {
   }
 };
 
-// const handleGetOtpForForgetPass = async (req, res) => {
- 
-// };
-
 const handleSendOtpforForgotPass=async(req,res)=>{
   console.log(req.body);
   const { email } = req.body;
@@ -117,13 +110,10 @@ const handleSendOtpforForgotPass=async(req,res)=>{
       email,
       otp,
     });
-    console.log("otp sent")
 
     const message = passwordResetOTPMessage(user.name, otp);
-    console.log(message);
     // Send OTP via email
     await sendEmail(email, "Your OTP Code", message);
-    console.log("otp otp")
     res.status(200).json({ message: "OTP sent to your email" });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
@@ -215,7 +205,6 @@ const handleSendOtpToEmail = async (req, res) => {
     const { email } = req.body;
     await Otp.findOneAndDelete({ email });
     const user = await User.findOne({ email });
-    // console.log(user);
     if (user) {
       return res
         .status(404)
