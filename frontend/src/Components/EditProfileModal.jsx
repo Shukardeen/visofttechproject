@@ -11,7 +11,7 @@ function EditProfileModal({ isOpen, onClose }) {
     const { user } = useSelector((state) => state.auth);
     const { error } = useSelector((state) => state.user);
     const { register, handleSubmit, control, formState: { errors, isSubmitting }, reset } = useForm();
-    console.log(user);
+
     const onSubmit = async (formData) => {
         const userData = new FormData();
         userData.append("name", formData.name);
@@ -33,9 +33,9 @@ function EditProfileModal({ isOpen, onClose }) {
     useEffect(() => {
         if (isOpen) {
             reset({
-                name: user?.name,
-                email: user?.email,
-                phone: user?.phone?.toString(),
+                name: user?.name || '',
+                email: user?.email || '',
+                phone: user?.phone?.toString() || '',
                 profilePic: '',
                 password: ''
             });

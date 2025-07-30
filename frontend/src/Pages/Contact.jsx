@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 
 function Contact() {
     const dispatch = useDispatch();
-    const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors, isSubmitting }, reset, setValue } = useForm();
     const { isAuthenticated, user } = useSelector((state) => state.auth);
     
     const onSubmit = async (formData) => {
@@ -28,6 +28,12 @@ function Contact() {
     useEffect(() => {
         reset();
     }, [])
+
+    useEffect(() => {
+        if (isAuthenticated && user && user.email) {
+            setValue("email", user.email);
+        }
+    }, [isAuthenticated, user, setValue]);
 
     return (
         <div className="w-full min-h-screen flex flex-col items-center px-4 pt-32 pb-12 bg-gradient-to-br from-gray-50 to-white">
@@ -72,8 +78,9 @@ function Contact() {
                                 <input
                                     type="email"
                                     id="email"
-                                    className={`w-full pl-10 pr-4 py-3 border border-card-border rounded-lg focus:ring-2 focus:ring-card-border focus:outline-none focus:border-transparent transition-all duration-200`}
+                                    className={`w-full pl-10 pr-4 py-3 ${isAuthenticated ? "bg-gray-100 text-gray-600" : ""} border border-card-border rounded-lg focus:ring-2 focus:ring-card-border focus:outline-none focus:border-transparent transition-all duration-200`}
                                     placeholder="Enter your email address"
+                                    readOnly={isAuthenticated}
                                     {...register("email", {
                                         required: {value: true, message: "Email is required"}
                                     })}
