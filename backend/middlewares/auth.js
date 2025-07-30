@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
+const User = require('../models/users.models');
 
-const checkForAuthentication = (req, res, next) => {
+const checkForAuthentication = async (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
         return res.status(401).json({ message: "Unauthorized access" });
@@ -8,7 +9,8 @@ const checkForAuthentication = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token, process.env.MY_JWT_SECRET);
-        req.user = decoded; // Attach user info to request object
+        const user = await User.findById(decoded.userId);
+        req.user = user; // Attach user info to request object
         next(); 
     } catch (error) {
         console.error('Token verification failed:', error);
