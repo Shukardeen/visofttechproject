@@ -7,7 +7,7 @@ function ServicePageHeadline() {
                 End-to-End IT Solutions <span className='text-text'>Tailored for Your Business</span>
             </h1>
             <p className="md:text-lg text-gray-600 leading-relaxed">
-                At AI SoftTech, we deliver scalable and secure IT solutions that drive growth and digital success.
+                At TechTalks, we deliver scalable and secure IT solutions that drive growth and digital success.
                 Whether you're a startup or an enterprise, our diverse service offerings empower your business to thrive in the digital age.
             </p>
         </div>

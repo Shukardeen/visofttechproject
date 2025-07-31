@@ -8,7 +8,7 @@ function AboutPageHeadline() {
             </h1>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 We are a team of visionary developers, designers, and strategists driven by a passion for innovation.
-                At AI SoftTech, our mission is to transform businesses through intelligent technology and tailored IT solutions.
+                At TechTalks, our mission is to transform businesses through intelligent technology and tailored IT solutions.
             </p>
         </div>
     )

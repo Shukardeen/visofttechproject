@@ -85,7 +85,7 @@ function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-text" />
-                <span className="text-gray-300">hello@aitech.com</span>
+                <span className="text-gray-300">hello@techtalks.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-text" />
