@@ -118,7 +118,7 @@ function Footer() {
         <div className="w-[83%] max-w-6xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              &copy; {currentYear} AI SoftTech. All rights reserved.
+              &copy; {currentYear} TechTalks. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link to="/" className="text-gray-400 text-center hover:text-blue-400 transition-colors duration-300">
@@ -131,6 +131,7 @@ function Footer() {
                 Cookie Policy
               </Link>
             </div>
+            <p>Developed by Shukardeen Gahlot</p>
           </div>
         </div>
       </div>
