@@ -131,7 +131,7 @@ function Footer() {
                 Cookie Policy
               </Link>
             </div>
-            <p>Developed by Shukardeen Gahlot</p>
+            <p className="text-gray-400 text-sm text-center md:text-left">Developed by Shukardeen Gahlot</p>
           </div>
         </div>
       </div>
